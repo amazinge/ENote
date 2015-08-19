@@ -1,0 +1,45 @@
+QScrollBar:horizontal
+{
+    border:0px;
+    height:10px;
+    background:rgba(0,0,0,0%);
+    margin:0px,0px,0px,0px;
+    padding-left:9px;/*左箭头9px*/
+    padding-right:9px;/*右箭头9px*/
+}
+QScrollBar::handle:horizontal
+{
+    background:rgba(0,0,0,25%);
+    min-width:20;
+}
+QScrollBar::handle:horizontal:hover
+{
+    background:rgba(0,0,0,50%);/*鼠标放到横向滚动条上的时颜色变深*/
+    min-width:20;
+}
+QScrollBar::sub-line:horizontal
+{
+    width:9px;height:10px;
+    border-image:url(:/images/scrollbar/left_1.png);/*左箭头*/
+    subcontrol-position:left;
+}
+QScrollBar::sub-line:horizontal:hover
+{
+    border-image:url(:/images/scrollbar/left_2.png);/*鼠标移到左箭头时*/
+    subcontrol-position:left;
+}
+QScrollBar::add-line:horizontal
+{
+    width:9px;height:10px;
+    border-image:url(:/images/scrollbar/right_1.png);/*右箭头*/
+    subcontrol-position:right;
+}
+QScrollBar::add-line:horizontal:hover
+{
+    border-image:url(:/images/scrollbar/right_2.png);/*鼠标移到右箭头时*/
+    subcontrol-position:right;
+}
+QScrollBar::add-page:horizontal,QScrollBar::sub-page:horizontal
+{
+    background:rgba(0,0,0,10%);
+}

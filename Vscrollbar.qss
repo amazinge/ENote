@@ -1,0 +1,44 @@
+QScrollBar:vertical
+{
+    width:10px;
+    background:rgba(0,0,0,0%);
+    margin:0px,0px,0px,0px;
+    padding-top:9px;/*上箭头9px*/
+    padding-bottom:9px;/*下箭头9px*/
+}
+QScrollBar::handle:vertical
+{
+    background:rgba(0,0,0,25%);
+    min-height:20;
+}
+QScrollBar::handle:vertical:hover
+{
+    background:rgba(0,0,0,50%);/*鼠标放到纵向滚动条上的时颜色变深*/
+    min-height:20;
+}
+QScrollBar::sub-line:vertical
+{
+    height:9px;width:10px;
+    border-image:url(:/images/scrollbar/up_1.png);/*上箭头*/
+    subcontrol-position:top;
+}
+QScrollBar::sub-line:vertical:hover
+{
+    border-image:url(:/images/scrollbar/up_2.png);/*鼠标移到上箭头时*/
+    subcontrol-position:top;
+}
+QScrollBar::add-line:vertical
+{
+    height:9px;width:10px;
+    border-image:url(:/images/scrollbar/down_1.png);/*下箭头*/
+    subcontrol-position:bottom;
+}
+QScrollBar::add-line:vertical:hover
+{
+    border-image:url(:/images/scrollbar/down_2.png);/*鼠标移到下箭头时*/
+    subcontrol-position:bottom;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical
+{
+    background:rgba(0,0,0,10%);
+}

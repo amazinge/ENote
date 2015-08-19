@@ -1,0 +1,15 @@
+QMenu
+{
+  background-color: white;
+  padding: 1px;
+}
+
+QMenu::item
+{
+  background-color: transparent;
+}
+QMenu::item:selected
+{
+  background-color: rgb(200, 200, 200);
+  color: black;
+}

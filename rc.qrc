@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>Vscrollbar.qss</file>
+        <file>Hscrollbar.qss</file>
+        <file>menu.qss</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>scrollbar/down_1.png</file>
+        <file>scrollbar/down_2.png</file>
+        <file>scrollbar/up_1.png</file>
+        <file>scrollbar/up_2.png</file>
+        <file>scrollbar/left_1.png</file>
+        <file>scrollbar/left_2.png</file>
+        <file>scrollbar/right_1.png</file>
+        <file>scrollbar/right_2.png</file>
+        <file>button/cross.png</file>
+        <file>button/plus.png</file>
+        <file>button/delete.png</file>
+        <file>button/more_1.png</file>
+        <file>button/more_2.png</file>
+    </qresource>
+    <qresource prefix="/other">
+        <file>qt_zh_CN.qm</file>
+        <file>ENote.ico</file>
+        <file>instructions</file>
+        <file>instructions.color</file>
+        <file>instructions.draw</file>
+    </qresource>
+</RCC>
