@@ -21,6 +21,8 @@
 const QString edit_font_name="微软雅黑";
 const QString msg_font_name="微软雅黑";
 
+QString programPath;
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -650,9 +652,9 @@ void Widget::moreAboutClicked()
 
 void Widget::moreInstructionsClicked()
 {
-    QFileInfo fileInfoi(qApp->applicationDirPath()+"/instructions");
-    QFileInfo fileInfoc(qApp->applicationDirPath()+"/instructions.color");
-    QFileInfo fileInfod(qApp->applicationDirPath()+"/instructions.draw");
+    QFileInfo fileInfoi(programPath+"/instructions");
+    QFileInfo fileInfoc(programPath+"/instructions.color");
+    QFileInfo fileInfod(programPath+"/instructions.draw");
     if(!fileInfoi.isFile()||!fileInfoc.isFile()||!fileInfod.isFile())
     {
         QFile file(":/other/instructions");
@@ -670,7 +672,7 @@ void Widget::moreInstructionsClicked()
         QString dString=file.readAll();
         file.close();
 
-        QFile iFile(qApp->applicationDirPath()+"/instructions");
+        QFile iFile(programPath+"/instructions");
         iFile.open(QIODevice::WriteOnly);
         iFile.close();
         iFile.open(QIODevice::WriteOnly);
@@ -678,7 +680,7 @@ void Widget::moreInstructionsClicked()
         iOut<<iString;
         iFile.close();
 
-        QFile cFile(qApp->applicationDirPath()+"/instructions.color");
+        QFile cFile(programPath+"/instructions.color");
         cFile.open(QIODevice::WriteOnly);
         cFile.close();
         cFile.open(QIODevice::WriteOnly);
@@ -686,7 +688,7 @@ void Widget::moreInstructionsClicked()
         cOut<<cString;
         cFile.close();
 
-        QFile dFile(qApp->applicationDirPath()+"/instructions.draw");
+        QFile dFile(programPath+"/instructions.draw");
         dFile.open(QIODevice::WriteOnly);
         dFile.close();
         dFile.open(QIODevice::WriteOnly);

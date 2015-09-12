@@ -62,7 +62,6 @@ private:
     bool isLeftPress;
     QPoint dragPosition;
     Direction dir;
-    QString programPath;
 protected:
 signals:
     void moreStateChange();
