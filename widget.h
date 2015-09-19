@@ -31,20 +31,20 @@ private:
     flatButton *delButton;//删除按钮
     flatButton *newButton;//新建按钮
     flatButton *moreButton;//更多按钮
-    bool delClicked;
-    QTimer *msgTimer;
-    QLabel *delMsg;
-    QColor editColor;
-    int trueWidth;
-    int trueHeight;
-    bool moreClickedBool;
-    QMenu *menu;
-    QAction *actionAbout;
-    QAction *actionInstructions;
-    QAction *actionFgx;
-    QMenu *menuDraw;
-    QAction *actionDraw;
-    QAction *actionClear;
+    bool delClicked;//删除按钮是否被按下
+    QTimer *msgTimer;//消息显示计时器
+    QLabel *delMsg;//“删除”消息
+    QColor editColor;//便笺颜色
+    int trueWidth;//除阴影外的宽度
+    int trueHeight;//除阴影外的高度
+    bool moreClickedBool;//更多按钮是否被按下
+    QMenu *menu;//“更多”按钮的下拉菜单
+    QAction *actionAbout;//关于
+    QAction *actionInstructions;//使用说明
+    QAction *actionFgx;//分割线
+    QMenu *menuDraw;//涂鸦菜单
+    QAction *actionDraw;//涂鸦
+    QAction *actionClear;//清空
     void region(const QPoint &cursorGlobalPoint);
     void mouseReleaseEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
@@ -58,7 +58,7 @@ private:
     int trueXToX(int x);
     int trueYToY(int y);
     int random();
-    bool isLeftPress;
+    bool isLeftPress;//左键是否按下
     QPoint dragPosition;
     Direction dir;
 protected:

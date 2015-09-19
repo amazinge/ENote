@@ -259,7 +259,6 @@ void noteEdit::paintEvent(QPaintEvent *event)
     QTextEdit::paintEvent(event);
     QPainter painter(viewport());
     painter.setPen(QPen(QColor(0,0,0)));
-    qDebug()<<lastPoint;
     painter.drawPath(painterPath);
     lastPoint=painterPath.currentPosition();
 }
@@ -283,8 +282,6 @@ void noteEdit::setFormat(int format, bool b)
 {
     QFont font;
     font=this->currentFont();
-    qDebug()<<font.bold()<<" "<<font.italic()<<" "<<font.underline()<<" "<<font.overline()<<
-              " "<<font.strikeOut();
     switch(format)
     {
     case 0:
