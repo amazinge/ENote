@@ -16,13 +16,15 @@ SOURCES += main.cpp\
         widget.cpp \
     flatbutton.cpp \
     noteedit.cpp \
-    aboutdialog.cpp
+    aboutdialog.cpp \
+    function.cpp
 
 HEADERS  += widget.h \
     flatbutton.h \
     noteedit.h \
     stable.h \
-    aboutdialog.h
+    aboutdialog.h \
+    function.h
 
 FORMS    += widget.ui \
     aboutdialog.ui

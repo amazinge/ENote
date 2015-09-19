@@ -20,18 +20,17 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
-    void setEditColor(QColor color = QColor(250,250,175));
-    void setEditColor(QString color = "250,250,175");
-    QString removeHtml(QString html);
-    QString noteName;
+    void setEditColor(QColor color = QColor(250,250,175));//用QColor设置便笺颜色
+    void setEditColor(QString color = "250,250,175");//用以逗号分割rgb的字符串设置便笺颜色
+    QString noteName;//便笺名
 
 private:
     Ui::Widget *ui;
-    noteEdit *edit;
-    flatButton *closeButton;
-    flatButton *delButton;
-    flatButton *newButton;
-    flatButton *moreButton;
+    noteEdit *edit;//编辑框
+    flatButton *closeButton;//关闭按钮
+    flatButton *delButton;//删除按钮
+    flatButton *newButton;//新建按钮
+    flatButton *moreButton;//更多按钮
     bool delClicked;
     QTimer *msgTimer;
     QLabel *delMsg;

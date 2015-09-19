@@ -1,6 +1,7 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include "aboutdialog.h"
+#include <function.h>
 #include <QFile>
 #include <QScrollBar>
 #include <QTimer>
@@ -321,7 +322,7 @@ void Widget::readNote(QString noteNamea)
     QFile noteFile(programPath+"/notes/"+noteName);
     noteFile.open(QFile::ReadOnly);
     QTextStream in(&noteFile);
-    QString noteHtml=removeHtml(in.readAll());
+    QString noteHtml=function::removeHtml(in.readAll());
     edit->setHtml(noteHtml);
     noteFile.close();
 
@@ -735,16 +736,6 @@ int Widget::random()
     t=QTime::currentTime();
     qsrand(t.msec()+t.second()*1000);
     return qrand();
-}
-
-QString Widget::removeHtml(QString html)
-{
-    QRegExp regexp("<(?!img|br|p|/p|style|/style|span|/span).*>");
-    regexp.setCaseSensitivity(Qt::CaseInsensitive);
-    regexp.setMinimal(true);
-    QString ret=html;
-    ret=ret.replace(regexp,"");
-    return ret;
 }
 
 void Widget::sleep(unsigned int msec)
