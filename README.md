@@ -1,4 +1,4 @@
-# 此代码不雅
+# 弃用
 ## 逸便笺 ENote
 
 使用Qt5.5.0编写
@@ -8,5 +8,3 @@ Use Qt5.5.0
 ENote,Convenient and quick record!
 
 ## 停止更新
-
-乱 烂
